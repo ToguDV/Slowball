@@ -6,6 +6,7 @@ public class deathRedBall : MonoBehaviour
 {
     public Animator animator;
     public Rigidbody2D rigidbody2D;
+    public GameObject efectoMuerte;
     void Start()
     {
     }
@@ -22,15 +23,16 @@ public class deathRedBall : MonoBehaviour
         
         if (collision.gameObject.CompareTag("EnemyKiller"))
         {
-            Invoke("Randomizar", 0.1f);
+            Matar();
         }
     }
 
-    public void Randomizar()
+    public void Matar()
     {
         if (!animator.GetBool("isDead"))
         {
             Vibrator.Vibrate(50);
+            Instantiate(efectoMuerte, transform.position, Quaternion.identity);
         }
         
         animator.SetBool("isDead", true);

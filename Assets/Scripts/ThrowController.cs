@@ -14,6 +14,7 @@ public class ThrowController : MonoBehaviour
     public float speed;
     public float maxSpeed;
     Vector3 lastVelocity;
+    public float maxLineTarget;
     public LineRendererController lineRendererController;
     void Start()
     {
@@ -42,7 +43,8 @@ public class ThrowController : MonoBehaviour
         mousePos.z = Camera.main.nearClipPlane;
         worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         puntoC.transform.position = worldPosition;
-        puntoA.transform.localPosition = puntoC.transform.localPosition * -0.4f;
+        puntoA.transform.localPosition = puntoC.transform.localPosition * -1.3f;
+        puntoA.transform.localPosition = Vector3.ClampMagnitude(puntoA.transform.localPosition, maxLineTarget);
         Time.timeScale = slowTime;
     }
 
