@@ -8,8 +8,10 @@ public class WinPlayer : MonoBehaviour
     public GameObject pause;
     public GameObject winEffect;
     public Animator animator;
+    public Star[] stars;
     void Start()
     {
+
         winWindows = GameObject.Find("WinUI");
         winWindows.SetActive(false);
     }
@@ -17,7 +19,7 @@ public class WinPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -32,6 +34,20 @@ public class WinPlayer : MonoBehaviour
 
     public void Win()
     {
+
+        foreach (var star in stars)
+        {
+            if (star)
+            {
+                Debug.Log("Estrella activa");
+                star.sendToWin();
+            }
+
+            else
+            {
+                Debug.Log("no se pudo activar la estrella");
+            }
+        }
         Instantiate(winEffect, transform.position, Quaternion.identity);
         animator.SetBool("isWin", true);
         //pause.SetActive(false);

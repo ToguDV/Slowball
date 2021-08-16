@@ -14,6 +14,6 @@ public class btnRestart : MonoBehaviour
     // Update is called once per frame
     public void click()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        LevelLoader.loadLevel(SceneManager.GetActiveScene().name);
     }
 }
