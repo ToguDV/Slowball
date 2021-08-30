@@ -8,7 +8,15 @@ public class WinPlayer : MonoBehaviour
     public GameObject pause;
     public GameObject winEffect;
     public Animator animator;
-    public Star[] stars;
+    Star[] stars = new Star[3];
+
+    private void Awake()
+    {
+        stars[0] = GameObject.Find("star3").GetComponent<Star>();
+        stars[1] = GameObject.Find("star2").GetComponent<Star>();
+        stars[2] = GameObject.Find("star1").GetComponent<Star>();
+
+    }
     void Start()
     {
 

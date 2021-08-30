@@ -15,22 +15,23 @@ public class ThrowController : MonoBehaviour
     public float maxSpeed;
     Vector3 lastVelocity;
     public float maxLineTarget;
-    public LineRendererController lineRendererController;
+    private LineRendererController lineRendererController;
     public static bool isSlow;
     public static float speedStatic;
     public delegate void ChangeTime();
     public static event ChangeTime Onslow;
-    private bool once;
-    private SpriteRenderer[] fondos;
+    public delegate void PlayerInfo();
+    public static event PlayerInfo OnFirstClick;
+    private bool onceDrag;
 
     private void Awake()
     {
-        fondos = GameObject.Find("fondos").GetComponentsInChildren<SpriteRenderer>();
+        onceDrag = false;
+        lineRendererController = GameObject.Find("Linerenderer").GetComponent<LineRendererController>();
         speedStatic = slowTime;
     }
     void Start()
     {
-
         isSlow = false;
     }
 
@@ -42,20 +43,35 @@ public class ThrowController : MonoBehaviour
 
     void FixedUpdate()
     {
+
         rigidbody2D.velocity = Vector2.ClampMagnitude(rigidbody2D.velocity, maxSpeed);
+
     }
 
 
     private void OnMouseDrag()
     {
+
+
+        if (OnFirstClick != null)
+        {
+            OnFirstClick();
+        }
         Time.timeScale = slowTime;
         ActualizarLineas();
         isSlow = true;
+
+        if (Onslow != null && !onceDrag)
+        {
+            Debug.Log("Llamado evento Onslow de OnMouseDrag");
+            Onslow();
+        }
+
+        onceDrag = true;
     }
 
     private void OnMouseUp()
     {
-
         Time.timeScale = normTime;
         puntoA.transform.position = puntoB.transform.position;
         puntoC.transform.position = puntoB.transform.position;
@@ -65,12 +81,20 @@ public class ThrowController : MonoBehaviour
             lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);
         }
         isSlow = false;
+
+        if (Onslow != null && onceDrag)
+        {
+            Debug.Log("Llamado evento Onslow de OnMouseUp");
+            Onslow();
+        }
+        onceDrag = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var speed = lastVelocity.magnitude;
         var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+
         rigidbody2D.velocity = direction * Mathf.Max(speed, 0f);
     }
 
