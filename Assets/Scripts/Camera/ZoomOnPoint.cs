@@ -15,6 +15,7 @@ public class ZoomOnPoint : MonoBehaviour
     bool temp2;
     void Awake()
     {
+        MakeZoom();
         temp1 = false;
         temp2 = false;
     }
@@ -34,12 +35,9 @@ public class ZoomOnPoint : MonoBehaviour
     public void MakeZoom()
     {
         StopAllCoroutines();
-        Debug.Log("Llamado MakeZoom");
-        Debug.Log("isSlow:" +ThrowController.isSlow);
         if (ThrowController.isSlow)
         {
             temp1 = true;
-            Debug.Log("Iniciar corutina de ZoomOut");
             StartCoroutine(ZoomOut());
         }
 

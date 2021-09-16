@@ -9,6 +9,7 @@ public static class LevelLoader
 
     public static void loadLevel(string name)
     {
+        Time.timeScale = 1;
         nextLevel = name;
         SceneManager.LoadSceneAsync("Loading");
     }

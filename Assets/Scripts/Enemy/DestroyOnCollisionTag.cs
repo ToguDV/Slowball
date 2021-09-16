@@ -19,6 +19,14 @@ public class DestroyOnCollisionTag : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (collision.gameObject.name == "Tilemap" || (collision.gameObject.name == "Tilemap (1)"))
+        {
+            Instantiate(destroyEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+
+
         if (collision.gameObject.CompareTag("PlayerVulnerability"))
         {
             Instantiate(destroyEffect, transform.position, transform.rotation);

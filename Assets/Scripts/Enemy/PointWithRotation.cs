@@ -5,11 +5,11 @@ using UnityEngine;
 public class PointWithRotation : MonoBehaviour
 {
     public float offset;
-    public GameObject target;
+    private GameObject target;
     public float rotationSpeed;
     void Start()
     {
-        
+        target = GameObject.Find("bola neon");
     }
 
     // Update is called once per frame

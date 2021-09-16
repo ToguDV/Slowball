@@ -5,23 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class DeathPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public ArenaLoader arenaLoader;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1;
+            arenaLoader.loadArena();
         }
     }
 }

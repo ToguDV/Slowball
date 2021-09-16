@@ -8,6 +8,7 @@ public class LoadingScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         string levelToLoad = LevelLoader.nextLevel;
         StartCoroutine(this.MakeTheLoad(levelToLoad));
     }
@@ -15,7 +16,6 @@ public class LoadingScene : MonoBehaviour
     // Update is called once per frame
     IEnumerator MakeTheLoad(string level)
     {
-        yield return new WaitForSeconds(3f);
         AsyncOperation operation = SceneManager.LoadSceneAsync(level);
 
         while (!operation.isDone)

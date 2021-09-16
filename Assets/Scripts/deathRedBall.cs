@@ -14,13 +14,13 @@ public class deathRedBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("EnemyKiller"))
         {
             Matar();
@@ -34,13 +34,15 @@ public class deathRedBall : MonoBehaviour
             Vibrator.Vibrate(50);
             Instantiate(efectoMuerte, transform.position, Quaternion.identity);
         }
-        
+
         animator.SetBool("isDead", true);
-        Invoke("Destruir", 10f);
+        Invoke("Destruir", 3f);
     }
 
     public void Destruir()
     {
         Destroy(gameObject);
+
+
     }
 }

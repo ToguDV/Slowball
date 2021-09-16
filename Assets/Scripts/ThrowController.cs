@@ -63,7 +63,6 @@ public class ThrowController : MonoBehaviour
 
         if (Onslow != null && !onceDrag)
         {
-            Debug.Log("Llamado evento Onslow de OnMouseDrag");
             Onslow();
         }
 
@@ -84,7 +83,6 @@ public class ThrowController : MonoBehaviour
 
         if (Onslow != null && onceDrag)
         {
-            Debug.Log("Llamado evento Onslow de OnMouseUp");
             Onslow();
         }
         onceDrag = false;
