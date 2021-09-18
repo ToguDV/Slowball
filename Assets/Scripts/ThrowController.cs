@@ -24,6 +24,12 @@ public class ThrowController : MonoBehaviour
     public static event PlayerInfo OnFirstClick;
     private bool onceDrag;
 
+    private void OnEnable()
+    {
+        BtnRevive.onRevive += Revivir;
+    }
+
+
     private void Awake()
     {
         onceDrag = false;
@@ -43,49 +49,69 @@ public class ThrowController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!DeathPlayer.isDead)
+        {
+            rigidbody2D.velocity = Vector2.ClampMagnitude(rigidbody2D.velocity, maxSpeed);
+        }
 
-        rigidbody2D.velocity = Vector2.ClampMagnitude(rigidbody2D.velocity, maxSpeed);
+        else
+        {
+            rigidbody2D.velocity = Vector2.zero;
+        }
 
     }
 
 
     private void OnMouseDrag()
     {
-
-
-        if (OnFirstClick != null)
+        if (!DeathPlayer.isDead)
         {
-            OnFirstClick();
-        }
-        Time.timeScale = slowTime;
-        ActualizarLineas();
-        isSlow = true;
 
-        if (Onslow != null && !onceDrag)
+            if (OnFirstClick != null)
+            {
+                OnFirstClick();
+            }
+            Time.timeScale = slowTime;
+            ActualizarLineas();
+            isSlow = true;
+
+            if (Onslow != null && !onceDrag)
+            {
+                Onslow();
+            }
+
+            onceDrag = true;
+        }
+
+        else
         {
-            Onslow();
+            puntoA.transform.position = puntoB.transform.position;
+            puntoC.transform.position = puntoB.transform.position;
+            this.enabled = false;
         }
 
-        onceDrag = true;
     }
 
     private void OnMouseUp()
     {
-        Time.timeScale = normTime;
-        puntoA.transform.position = puntoB.transform.position;
-        puntoC.transform.position = puntoB.transform.position;
-        rigidbody2D.velocity = (lineRendererController.lineRenderer.GetPosition(1) - lineRendererController.lineRenderer.GetPosition(2)) * speed;
-        for (int i = 0; i < lineRendererController.points.Length; i++)
+        if (!DeathPlayer.isDead)
         {
-            lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);
-        }
-        isSlow = false;
+            Time.timeScale = normTime;
+            puntoA.transform.position = puntoB.transform.position;
+            puntoC.transform.position = puntoB.transform.position;
+            rigidbody2D.velocity = (lineRendererController.lineRenderer.GetPosition(1) - lineRendererController.lineRenderer.GetPosition(2)) * speed;
+            for (int i = 0; i < lineRendererController.points.Length; i++)
+            {
+                lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);
+            }
+            isSlow = false;
 
-        if (Onslow != null && onceDrag)
-        {
-            Onslow();
+            if (Onslow != null && onceDrag)
+            {
+                Onslow();
+            }
+            onceDrag = false;
         }
-        onceDrag = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -108,5 +134,10 @@ public class ThrowController : MonoBehaviour
         {
             lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);
         }
+    }
+
+    public void Revivir()
+    {
+        this.enabled = true;
     }
 }
