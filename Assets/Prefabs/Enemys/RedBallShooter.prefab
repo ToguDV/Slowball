@@ -157,9 +157,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ratio: 2
   startDelay: 2
-  anticipationRatio: 0.8
+  anticipationRatio: 0.6
   bullet: {fileID: 118542644390954889, guid: 53da21c139059fc4c918acf1e951841e, type: 3}
   sprite: {fileID: 8825329154284058938}
+  hasAiPath: 1
 --- !u!1 &8825329154482921961
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,15 +7,7 @@ public class deathRedBall : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rigidbody2D;
     public GameObject efectoMuerte;
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public GameObject father;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,7 +33,7 @@ public class deathRedBall : MonoBehaviour
 
     public void Destruir()
     {
-        Destroy(gameObject);
+        Destroy(father);
 
 
     }

@@ -22,16 +22,13 @@ public class ThrowController : MonoBehaviour
     public static event ChangeTime Onslow;
     public delegate void PlayerInfo();
     public static event PlayerInfo OnFirstClick;
+    private bool firstClick;
     private bool onceDrag;
-
-    private void OnEnable()
-    {
-        BtnRevive.onRevive += Revivir;
-    }
 
 
     private void Awake()
     {
+        firstClick = true;
         onceDrag = false;
         lineRendererController = GameObject.Find("Linerenderer").GetComponent<LineRendererController>();
         speedStatic = slowTime;
@@ -54,11 +51,13 @@ public class ThrowController : MonoBehaviour
             rigidbody2D.velocity = Vector2.ClampMagnitude(rigidbody2D.velocity, maxSpeed);
         }
 
-        else
-        {
-            rigidbody2D.velocity = Vector2.zero;
-        }
 
+    }
+
+    private void OnDisable()
+    {
+        EsconderLineas();
+        rigidbody2D.velocity = Vector2.zero;
     }
 
 
@@ -69,7 +68,12 @@ public class ThrowController : MonoBehaviour
 
             if (OnFirstClick != null)
             {
-                OnFirstClick();
+                if (firstClick)
+                {
+                    OnFirstClick();
+                    firstClick = false;
+                }
+                
             }
             Time.timeScale = slowTime;
             ActualizarLineas();
@@ -85,9 +89,7 @@ public class ThrowController : MonoBehaviour
 
         else
         {
-            puntoA.transform.position = puntoB.transform.position;
-            puntoC.transform.position = puntoB.transform.position;
-            this.enabled = false;
+            
         }
 
     }
@@ -97,13 +99,7 @@ public class ThrowController : MonoBehaviour
         if (!DeathPlayer.isDead)
         {
             Time.timeScale = normTime;
-            puntoA.transform.position = puntoB.transform.position;
-            puntoC.transform.position = puntoB.transform.position;
-            rigidbody2D.velocity = (lineRendererController.lineRenderer.GetPosition(1) - lineRendererController.lineRenderer.GetPosition(2)) * speed;
-            for (int i = 0; i < lineRendererController.points.Length; i++)
-            {
-                lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);
-            }
+            EsconderLineas();
             isSlow = false;
 
             if (Onslow != null && onceDrag)
@@ -136,8 +132,20 @@ public class ThrowController : MonoBehaviour
         }
     }
 
-    public void Revivir()
+    public void EsconderLineas()
     {
-        this.enabled = true;
+        if (puntoA.transform.position != puntoB.transform.position)
+        {
+            puntoA.transform.position = puntoB.transform.position;
+            puntoC.transform.position = puntoB.transform.position;
+            rigidbody2D.velocity = (lineRendererController.lineRenderer.GetPosition(1) - lineRendererController.lineRenderer.GetPosition(2)) * speed;
+            for (int i = 0; i < lineRendererController.points.Length; i++)
+            {
+                lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);
+            }
+
+        }
     }
+
+    
 }

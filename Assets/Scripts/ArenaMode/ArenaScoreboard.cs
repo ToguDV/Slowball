@@ -7,9 +7,24 @@ public class ArenaScoreboard : MonoBehaviour
 {
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI recordTxt;
-    float time;
+    public static float time;
+    bool enable;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        time = 0f;
+        setEnable(false);
+        UpdateScore(time);
+    }
+
+    private void OnEnable()
+    {
+        DeathPlayer.onDeath += Desactivate;
+        BtnRevive.onRevive += Activate;
+        ThrowController.OnFirstClick += Activate;
+
+    }
+
     void Start()
     {
         recordTxt.text = PlayerPrefs.GetInt("arenaRecord", 0) + "";
@@ -17,8 +32,11 @@ public class ArenaScoreboard : MonoBehaviour
 
     private void Update()
     {
-        time += Time.deltaTime;
-        UpdateScore(time);
+        if (enable)
+        {
+            time += Time.deltaTime;
+            UpdateScore(time);
+        }
     }
 
     void UpdateScore(float value)
@@ -31,5 +49,26 @@ public class ArenaScoreboard : MonoBehaviour
             PlayerPrefs.SetInt("arenaRecord", temp);
         }
         
+    }
+
+    private void OnDisable()
+    {
+        DeathPlayer.onDeath -= Desactivate;
+        BtnRevive.onRevive -= Activate;
+        ThrowController.OnFirstClick -= Activate;
+    }
+
+    void setEnable(bool value)
+    {
+        enable = value;
+    }
+
+    void Activate()
+    {
+        setEnable(true);
+    }
+    void Desactivate()
+    {
+        setEnable(false);
     }
 }

@@ -5,19 +5,23 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class BtnRevive : MonoBehaviour, IUnityAdsListener {
+public class BtnRevive : MonoBehaviour, IUnityAdsListener
+{
     public delegate void ReviveAction();
     public static event ReviveAction onRevive;
-    string gameIdAndroid = "4350991";
-    string myPlacementId = "Rewarded_Android";
     bool testMode = true;
-    public static bool ready;
     private string debugMessaje;
     public Text text;
+    public GameObject loadingSprite;
+    bool runingCoroutine;
+    public GameObject btnQuit;
+    private int currenTries;
     void Start()
     {
+        currenTries = 0;
+        loadingSprite.SetActive(false);
+        runingCoroutine = false;
         Advertisement.AddListener(this);
-        Advertisement.Initialize(gameIdAndroid, testMode);
     }
 
     // Update is called once per frame
@@ -28,10 +32,32 @@ public class BtnRevive : MonoBehaviour, IUnityAdsListener {
 
     public void click()
     {
-        if (ready)
+        if (!runingCoroutine)
         {
-            Advertisement.Show(myPlacementId);
+            btnQuit.SetActive(false);
+            StartCoroutine(CoroutineClick());
         }
+    }
+
+    IEnumerator CoroutineClick()
+    {
+        loadingSprite.SetActive(true);
+        runingCoroutine = true;
+        while (!Advertisement.IsReady() || !Advertisement.isInitialized)
+        {
+            currenTries++;
+            if(currenTries >= AdsManager.maxTriesTimeOut)
+            {
+                btnQuit.SetActive(true);
+                Destroy(gameObject);
+                
+            }
+            yield return new WaitForSecondsRealtime(1f);
+        }
+        Advertisement.Show(AdsManager.idAndroidReward);
+        PlayerPrefs.SetFloat("currentPlayTime", 0f);
+        loadingSprite.SetActive(false);
+
     }
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
@@ -41,29 +67,34 @@ public class BtnRevive : MonoBehaviour, IUnityAdsListener {
         {
             if (onRevive != null)
             {
-            //    debugMessaje = "Succeful";
+                //    debugMessaje = "Succeful";
                 onRevive();
+                
             }
         }
         else if (showResult == ShowResult.Skipped)
         {
-          //  debugMessaje = "Skipped";
+            //  debugMessaje = "Skipped";
+            btnQuit.SetActive(true);
         }
         else if (showResult == ShowResult.Failed)
         {
-        //    debugMessaje = ("Showw result failed.");
+            //    debugMessaje = ("Showw result failed.");
+            btnQuit.SetActive(true);
+            Destroy(gameObject);
         }
     }
 
     public void OnUnityAdsReady(string placementId)
     {
         //debugMessaje = "ready";
-        ready = true;
     }
 
     public void OnUnityAdsDidError(string message)
     {
+        btnQuit.SetActive(true);
         debugMessaje = message;
+        gameObject.SetActive(false);
     }
 
     public void OnUnityAdsDidStart(string placementId)
