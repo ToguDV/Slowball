@@ -8,7 +8,7 @@ public class RedBallShooterDeathManager : MonoBehaviour
     public GameObject father;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

@@ -19,10 +19,27 @@ public class ArenaScoreboard : MonoBehaviour
 
     private void OnEnable()
     {
+        RestartFast.onRestart += ClearScore;
         DeathPlayer.onDeath += Desactivate;
         BtnRevive.onRevive += Activate;
         ThrowController.OnFirstClick += Activate;
 
+    }
+
+    private void OnDisable()
+    {
+        DeathPlayer.onDeath -= Desactivate;
+        BtnRevive.onRevive -= Activate;
+        ThrowController.OnFirstClick -= Activate;
+        ThrowController.OnFirstClick -= Activate;
+    }
+
+
+    public void ClearScore()
+    {
+        time = 0;
+        recordTxt.text = PlayerPrefs.GetInt("arenaRecord", 0) + "";
+        UpdateScore(time);
     }
 
     void Start()
@@ -44,18 +61,11 @@ public class ArenaScoreboard : MonoBehaviour
         int temp;
         temp = (int)Mathf.Round(value);
         scoreTxt.text = temp + "";
-        if(temp > PlayerPrefs.GetInt("arenaRecord", 0))
+        if (temp > PlayerPrefs.GetInt("arenaRecord", 0))
         {
             PlayerPrefs.SetInt("arenaRecord", temp);
         }
-        
-    }
 
-    private void OnDisable()
-    {
-        DeathPlayer.onDeath -= Desactivate;
-        BtnRevive.onRevive -= Activate;
-        ThrowController.OnFirstClick -= Activate;
     }
 
     void setEnable(bool value)

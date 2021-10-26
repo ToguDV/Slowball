@@ -9,22 +9,24 @@ public class BeForeClickManager : MonoBehaviour
 
     private void OnEnable()
     {
+        RestartFast.onRestart += MostrarTodo;
         ThrowController.OnFirstClick += OcultarTodo;
     }
 
     private void OnDisable()
     {
+        RestartFast.onRestart -= MostrarTodo;
         ThrowController.OnFirstClick -= OcultarTodo;
     }
     void Start()
     {
-        once = true;   
+        once = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OcultarTodo()
@@ -36,6 +38,15 @@ public class BeForeClickManager : MonoBehaviour
                 contenido.SetActive(false);
             }
             once = false;
+        }
+    }
+
+    void MostrarTodo()
+    {
+        once = true;
+        foreach (GameObject contenido in contenidos)
+        {
+            contenido.SetActive(true);
         }
     }
 }

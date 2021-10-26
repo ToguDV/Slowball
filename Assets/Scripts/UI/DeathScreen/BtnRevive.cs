@@ -9,7 +9,6 @@ public class BtnRevive : MonoBehaviour, IUnityAdsListener
 {
     public delegate void ReviveAction();
     public static event ReviveAction onRevive;
-    bool testMode = true;
     private string debugMessaje;
     public Text text;
     public GameObject loadingSprite;
@@ -25,10 +24,6 @@ public class BtnRevive : MonoBehaviour, IUnityAdsListener
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        text.text = debugMessaje;
-    }
 
     public void click()
     {
@@ -54,6 +49,7 @@ public class BtnRevive : MonoBehaviour, IUnityAdsListener
             }
             yield return new WaitForSecondsRealtime(1f);
         }
+        runingCoroutine = false;
         Advertisement.Show(AdsManager.idAndroidReward);
         PlayerPrefs.SetFloat("currentPlayTime", 0f);
         loadingSprite.SetActive(false);

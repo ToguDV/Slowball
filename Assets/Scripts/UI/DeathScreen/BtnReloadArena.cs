@@ -8,6 +8,7 @@ public class BtnReloadArena : MonoBehaviour
 
     public void Click()
     {
-        arenaLoader.loadArena();
+        //arenaLoader.loadArena();
+        RestartFast.Restart();
     }
 }

@@ -63,50 +63,59 @@ public class ThrowController : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!DeathPlayer.isDead)
+        if (!btnPause.isPaused)
         {
 
-            if (OnFirstClick != null)
+            if (!DeathPlayer.isDead)
             {
-                if (firstClick)
+
+                if (OnFirstClick != null)
                 {
-                    OnFirstClick();
-                    firstClick = false;
+                    if (firstClick)
+                    {
+                        OnFirstClick();
+                        firstClick = false;
+                    }
+
                 }
-                
-            }
-            Time.timeScale = slowTime;
-            ActualizarLineas();
-            isSlow = true;
+                Time.timeScale = slowTime;
+                ActualizarLineas();
+                isSlow = true;
 
-            if (Onslow != null && !onceDrag)
+                if (Onslow != null && !onceDrag)
+                {
+                    Onslow();
+                }
+
+                onceDrag = true;
+            }
+
+            else
             {
-                Onslow();
+
             }
 
-            onceDrag = true;
-        }
-
-        else
-        {
-            
         }
 
     }
 
     private void OnMouseUp()
     {
-        if (!DeathPlayer.isDead)
+        if (!btnPause.isPaused)
         {
-            Time.timeScale = normTime;
-            EsconderLineas();
-            isSlow = false;
-
-            if (Onslow != null && onceDrag)
+            if (!DeathPlayer.isDead)
             {
-                Onslow();
+                Time.timeScale = normTime;
+                EsconderLineas();
+                isSlow = false;
+
+                if (Onslow != null && onceDrag)
+                {
+                    Onslow();
+                }
+                onceDrag = false;
             }
-            onceDrag = false;
+
         }
     }
 
@@ -145,6 +154,11 @@ public class ThrowController : MonoBehaviour
             }
 
         }
+    }
+
+    public void setFirstClick(bool value)
+    {
+        firstClick = value;
     }
 
     

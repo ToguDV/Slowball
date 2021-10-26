@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
-public class DeathPlayer : MonoBehaviour
+public class DeathPlayer : MonoBehaviour, IUnityAdsListener
 {
     public ArenaLoader arenaLoader;
     public GameObject templateDeath;
@@ -19,22 +20,30 @@ public class DeathPlayer : MonoBehaviour
     public static event DeathAction onDeath;
     public float restartDelay;
     bool once;
+    private GameObject spawnPoint;
+    public GameObject father;
 
     private void OnEnable()
     {
+        RestartFast.onRestart += Reinicio;
         BtnRevive.onRevive += Revivir;
     }
 
     private void OnDisable()
     {
+        RestartFast.onRestart -= Reinicio;
         BtnRevive.onRevive -= Revivir;
     }
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("currentDeaths", 0);
+        Debug.Log("deaths = "+ PlayerPrefs.GetInt("currentDeaths", 0) + "/"+AdsManager.deathsToShowReward);
+        spawnPoint = GameObject.Find("SpawnPoint");
         once = true;
         currentRevives = 0;
         isDead = false;
+        Advertisement.AddListener(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,7 +51,7 @@ public class DeathPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && once)
         {
             once = false;
-            if(onDeath != null)
+            if (onDeath != null)
             {
                 onDeath();
             }
@@ -59,15 +68,14 @@ public class DeathPlayer : MonoBehaviour
                 btnQuit.SetActive(false);
                 btnRevive.SetActive(false);
                 Invoke("loadArena", restartDelay);
-
             }
             //No ha revivido mucho
             else
             {
                 PlayerPrefs.SetFloat("currentPlayTime", ArenaScoreboard.time + PlayerPrefs.GetFloat("currentPlayTime", 0f));
-                Debug.Log("CurrentPlayTime:" + PlayerPrefs.GetFloat("currentPlayTime", 0f));
-                Debug.Log("CurrenDeaths:" + PlayerPrefs.GetInt("currentDeaths", 0));
-                if(PlayerPrefs.GetFloat("currentPlayTime", 0f) >= AdsManager.timeToShowReward && PlayerPrefs.GetInt("currentDeaths", 0) >= AdsManager.deathsToShowReward)
+
+                //SE MUESTRA LA OPCION DE REVIVIR
+                if (ArenaScoreboard.time >= AdsManager.timeToShowReward)
                 {
                     PlayerPrefs.SetInt("currentDeaths", 0);
                     btnRevive.SetActive(true);
@@ -78,6 +86,13 @@ public class DeathPlayer : MonoBehaviour
                     btnQuit.SetActive(false);
                     btnRevive.SetActive(false);
                     Invoke("loadArena", restartDelay);
+                    if (PlayerPrefs.GetInt("currentDeaths", 0) >= AdsManager.deathsToShowReward)
+                    {
+                        Debug.Log("deaths = " + PlayerPrefs.GetInt("currentDeaths", 0) + "/" + AdsManager.deathsToShowReward);
+                        PlayerPrefs.SetInt("currentDeaths", 0);
+                        Advertisement.Show(AdsManager.idAndroidInters);
+                    }
+
                 }
             }
         }
@@ -85,7 +100,7 @@ public class DeathPlayer : MonoBehaviour
 
     private void loadArena()
     {
-        arenaLoader.loadArena();
+        RestartFast.Restart();
     }
 
     private void Revivir()
@@ -96,5 +111,40 @@ public class DeathPlayer : MonoBehaviour
         templateDeath.SetActive(false);
         isDead = false;
         throwController.enabled = true;
+    }
+
+    private void Reinicio()
+    {
+        btnQuit.SetActive(false);
+        btnRevive.SetActive(false);
+        father.transform.position = spawnPoint.transform.position;
+        once = true;
+        animator.SetBool("IsDeath", false);
+        templateDeath.SetActive(false);
+        isDead = false;
+        throwController.enabled = true;
+        throwController.setFirstClick(true);
+        currentRevives = 0;
+
+    }
+
+    public void OnUnityAdsReady(string placementId)
+    {
+
+    }
+
+    public void OnUnityAdsDidError(string message)
+    {
+
+    }
+
+    public void OnUnityAdsDidStart(string placementId)
+    {
+
+    }
+
+    public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
+    {
+
     }
 }

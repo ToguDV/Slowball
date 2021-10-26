@@ -62,6 +62,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arenaLoader: {fileID: 2265211930372223162}
+  templateDeath: {fileID: 0}
+  btnRevive: {fileID: 0}
+  btnQuit: {fileID: 0}
+  maxRevives: 1
+  animator: {fileID: 0}
+  deathEffect: {fileID: 0}
+  throwController: {fileID: 0}
+  restartDelay: 0
+  father: {fileID: 0}
 --- !u!114 &2265211930372223162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +329,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 43.66
+  m_Radius: 27.659994
 --- !u!50 &533661058344182247
 Rigidbody2D:
   serializedVersion: 4

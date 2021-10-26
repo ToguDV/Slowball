@@ -8,6 +8,26 @@ public class deathRedBall : MonoBehaviour
     public Rigidbody2D rigidbody2D;
     public GameObject efectoMuerte;
     public GameObject father;
+    public bool destroyOther = false;
+    public GameObject other;
+
+    private void OnEnable()
+    {
+        RestartFast.onRestart += Destruir;
+        BtnRevive.onRevive += Matar;
+    }
+
+    private void OnDisable()
+    {
+        RestartFast.onRestart -= Destruir;
+        BtnRevive.onRevive -= Matar;
+    }
+
+    private void OnDestroy()
+    {
+        RestartFast.onRestart -= Destruir;
+        BtnRevive.onRevive -= Matar;
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +41,11 @@ public class deathRedBall : MonoBehaviour
 
     public void Matar()
     {
+        if (destroyOther)
+        {
+            Destroy(other);
+        }
+
         if (!animator.GetBool("isDead"))
         {
             Vibrator.Vibrate(50);

@@ -9,6 +9,7 @@ public class ArenaModeSpawner : MonoBehaviour
     public GameObject[] enemys;
     public GameObject[] spawnPoints;
     private int maxIndex;
+    public int[] timeProgress;
 
 
     private void OnEnable()
@@ -33,7 +34,7 @@ public class ArenaModeSpawner : MonoBehaviour
 
     void Start()
     {
-        maxIndex = 0;
+        maxIndex = 1;
     }
 
     // Update is called once per frame
@@ -42,10 +43,18 @@ public class ArenaModeSpawner : MonoBehaviour
     {
         while (true)
         {
+            if (maxIndex != timeProgress.Length + 1)
+            {
+                if (ArenaScoreboard.time > timeProgress[maxIndex - 1])
+                {
+                    maxIndex++;
+                }
+            }
+
             SpawnearEnemigo(Random.Range(0, maxIndex));
             yield return new WaitForSeconds(ratio);
         }
-        
+
     }
 
     void SpawnearEnemigo(int enemyIndex)

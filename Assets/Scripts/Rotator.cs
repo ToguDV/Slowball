@@ -16,6 +16,15 @@ public class Rotator : MonoBehaviour
     public bool ReverseX = false;
     public bool ReverseY = false;
     public bool ReverseZ = false;
+    public bool aleatorizar = false;
+
+    private void Start()
+    {
+        if (aleatorizar)
+        {
+            speed = Random.Range(speed - (speed * 0.6f), speed + (speed * 0.5f));
+        }
+    }
 
     void Update()
     {

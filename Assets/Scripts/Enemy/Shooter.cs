@@ -14,9 +14,12 @@ public class Shooter : MonoBehaviour
     public static bool temp;
     public bool hasAiPath = true;
     private AIPath aIPath;
+    private bool alreadyShoot;
 
     private void Awake()
     {
+        sprite.enabled = false;
+        ratio = Random.Range(ratio, ratio * 1.5f + 1);
         if (hasAiPath)
         {
             aIPath = GetComponentInParent<AIPath>();
@@ -24,7 +27,7 @@ public class Shooter : MonoBehaviour
 
         if (!temp)
         {
-            canShoot = true;
+            ActivarShooter();
         }
 
         else
@@ -51,25 +54,16 @@ public class Shooter : MonoBehaviour
         BtnRevive.onRevive -= ActivarShooter;
     }
 
-    void Start()
-    {
-        sprite.enabled = false;
-        if (canShoot)
-        {
-            Invoke("SpriteEnable", ratio * anticipationRatio);
-            InvokeRepeating("Shoot", startDelay, ratio);
-        }
-    }
 
     void Shoot()
     {
         Instantiate(bullet, transform.position, transform.rotation);
         sprite.enabled = false;
-        Invoke("SpriteEnable", ratio * anticipationRatio);
     }
 
     public void DesactivarShooter()
     {
+        alreadyShoot = false;
         setSeguimiento(false);
         temp = true;
         canShoot = false;
@@ -83,8 +77,9 @@ public class Shooter : MonoBehaviour
         setSeguimiento(true);
         temp = false;
         canShoot = true;
-        Invoke("SpriteEnable", ratio * anticipationRatio);
+        InvokeRepeating("SpriteEnable", startDelay*anticipationRatio, ratio * anticipationRatio);
         InvokeRepeating("Shoot", startDelay, ratio);
+        alreadyShoot = true;
     }
 
     void SpriteEnable()
