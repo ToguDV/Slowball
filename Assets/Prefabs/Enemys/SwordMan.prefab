@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7888762869415818360}
   - component: {fileID: 7888762869415818343}
   - component: {fileID: 7888762869415818362}
+  - component: {fileID: 1258899133458642125}
   m_Layer: 0
   m_Name: sword
   m_TagString: Enemy
@@ -143,6 +144,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07271084, y: 2.4288845}
   m_EdgeRadius: 0
+--- !u!95 &1258899133458642125
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888762869415818364}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f309a8275146630469747a3c2c4ad279, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7888762870645568608
 GameObject:
   m_ObjectHideFlags: 0

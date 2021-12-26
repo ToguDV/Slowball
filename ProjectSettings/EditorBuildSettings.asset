@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level8.unity
     guid: 4f5bf09448542b04d9e1d1066464de6d
   - enabled: 1
+    path: Assets/Scenes/Arena2.unity
+    guid: 9f691846da44d20449666e42d9788baa
+  - enabled: 1
+    path: Assets/Scenes/Arena3.unity
+    guid: 098a7ca972aa46448b8d279bea82b72b
+  - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: d760ad17b46f4ea4082ef8dc98db0cc6
   - enabled: 1

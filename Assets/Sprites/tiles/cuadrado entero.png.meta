@@ -1,0 +1,1562 @@
+fileFormatVersion: 2
+guid: 12e22e3033135b845b3b85d2199516b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5691345119460632254
+    second: cuadrado standar_0
+  - first:
+      213: 750302350312479541
+    second: cuadrado standar_1
+  - first:
+      213: 8685921316198911054
+    second: cuadrado standar_2
+  - first:
+      213: -3684022141907814237
+    second: cuadrado standar_0
+  - first:
+      213: 717696279272443806
+    second: cuadrado standar_1
+  - first:
+      213: 6905104453571598195
+    second: cuadrado standar_2
+  - first:
+      213: -6469434198878904383
+    second: cuadrado standar_3
+  - first:
+      213: 8215460183454262326
+    second: cuadrado standar_4
+  - first:
+      213: 4166392351408108384
+    second: cuadrado standar_5
+  - first:
+      213: -1635846699004067281
+    second: cuadrado standar_6
+  - first:
+      213: -5461745690326097557
+    second: cuadrado standar_7
+  - first:
+      213: 500836514690978131
+    second: cuadrado standar_8
+  - first:
+      213: -8136248201334182185
+    second: cuadrado standar_9
+  - first:
+      213: 4476581219756886234
+    second: cuadrado standar_10
+  - first:
+      213: -1434713713575943442
+    second: cuadrado standar_11
+  - first:
+      213: -5720604590382918973
+    second: cuadrado standar_12
+  - first:
+      213: 1026948938982074346
+    second: cuadrado standar_13
+  - first:
+      213: 7325613892994915223
+    second: cuadrado standar_14
+  - first:
+      213: 7482529877315900415
+    second: cuadrado standar_15
+  - first:
+      213: 5643606547592060727
+    second: cuadrado standar_16
+  - first:
+      213: -6094953118477716018
+    second: cuadrado standar_17
+  - first:
+      213: -4902113335173368629
+    second: cuadrado standar_18
+  - first:
+      213: -4945966999890625666
+    second: cuadrado standar_19
+  - first:
+      213: 2353622886658267207
+    second: cuadrado standar_20
+  - first:
+      213: 6179521263625071887
+    second: cuadrado standar_21
+  - first:
+      213: 5458724054629962302
+    second: cuadrado standar_22
+  - first:
+      213: 8777691602118776753
+    second: cuadrado standar_23
+  - first:
+      213: 6090712807849317140
+    second: cuadrado standar_24
+  - first:
+      213: -508673258679269427
+    second: cuadrado standar_25
+  - first:
+      213: -966322905178218875
+    second: cuadrado standar_26
+  - first:
+      213: 664173752735964841
+    second: cuadrado standar_27
+  - first:
+      213: 6308340867720189010
+    second: cuadrado standar_28
+  - first:
+      213: -8595788567759883500
+    second: cuadrado standar_29
+  - first:
+      213: 7404126201420495439
+    second: cuadrado standar_30
+  - first:
+      213: -2973829914444282346
+    second: cuadrado standar_31
+  - first:
+      213: -5645640357443214603
+    second: cuadrado standar_32
+  - first:
+      213: -2979537017815242296
+    second: cuadrado standar_33
+  - first:
+      213: 8051775889365152046
+    second: cuadrado standar_34
+  - first:
+      213: -2399650941655567363
+    second: cuadrado standar_35
+  - first:
+      213: -1909325168007784557
+    second: cuadrado standar_36
+  - first:
+      213: -7219618809228297956
+    second: cuadrado standar_37
+  - first:
+      213: 3756120492567862520
+    second: cuadrado standar_38
+  - first:
+      213: -3017444411819229625
+    second: cuadrado standar_39
+  - first:
+      213: -5358645703794687553
+    second: cuadrado standar_40
+  - first:
+      213: -4428543617908382449
+    second: cuadrado standar_41
+  - first:
+      213: 7322507733267834942
+    second: cuadrado standar_42
+  - first:
+      213: 3465583334394250195
+    second: cuadrado standar_43
+  - first:
+      213: 7121165172988924562
+    second: cuadrado standar_44
+  - first:
+      213: 4489059215550667442
+    second: cuadrado standar_45
+  - first:
+      213: -1366726135750386194
+    second: cuadrado standar_46
+  - first:
+      213: -8710534292085560456
+    second: cuadrado standar_47
+  - first:
+      213: 4574514721992626237
+    second: cuadrado standar_48
+  - first:
+      213: -4197887138945439661
+    second: cuadrado standar_49
+  - first:
+      213: -4513220616027905105
+    second: cuadrado standar_50
+  - first:
+      213: 1911473313605134499
+    second: cuadrado standar_51
+  - first:
+      213: 7871228249736715671
+    second: cuadrado standar_52
+  - first:
+      213: 5515646174215799246
+    second: cuadrado standar_53
+  - first:
+      213: 5090083454616678470
+    second: cuadrado standar_54
+  - first:
+      213: 5678724798090692734
+    second: cuadrado standar_55
+  - first:
+      213: 7483667158141659418
+    second: cuadrado standar_56
+  - first:
+      213: -1216258114787951121
+    second: cuadrado standar_57
+  - first:
+      213: -1190438161088898530
+    second: cuadrado standar_58
+  - first:
+      213: 892074690847179578
+    second: cuadrado standar_59
+  - first:
+      213: 3962883768300430576
+    second: cuadrado standar_60
+  - first:
+      213: 1773964424052737815
+    second: cuadrado standar_61
+  - first:
+      213: -6293494734555194623
+    second: cuadrado standar_62
+  - first:
+      213: -55757585203340809
+    second: cuadrado standar_63
+  - first:
+      213: 3878519574735062023
+    second: cuadrado standar_64
+  - first:
+      213: -4635704072592753978
+    second: cuadrado standar_65
+  - first:
+      213: 1289888544629548149
+    second: cuadrado standar_66
+  - first:
+      213: 6507614430167690310
+    second: cuadrado standar_67
+  - first:
+      213: -6894214637627377328
+    second: cuadrado standar_68
+  - first:
+      213: 4291307062942032150
+    second: cuadrado standar_69
+  - first:
+      213: 8892750968102804114
+    second: cuadrado standar_70
+  - first:
+      213: -5457747802118205276
+    second: cuadrado standar_71
+  - first:
+      213: 7418502800519951310
+    second: cuadrado standar_72
+  - first:
+      213: -4156554666550292490
+    second: cuadrado standar_73
+  - first:
+      213: 636903924534859276
+    second: cuadrado standar_74
+  - first:
+      213: -2652546250799576110
+    second: cuadrado standar_75
+  - first:
+      213: 8514825714168419685
+    second: cuadrado standar_76
+  - first:
+      213: 7477851206412143333
+    second: cuadrado standar_77
+  - first:
+      213: -293006566956797548
+    second: cuadrado standar_78
+  - first:
+      213: 5298959845921110675
+    second: cuadrado standar_79
+  - first:
+      213: -7081183756119891546
+    second: cuadrado standar_80
+  - first:
+      213: 2238223873598598963
+    second: cuadrado standar_81
+  - first:
+      213: -3116673121525516318
+    second: cuadrado standar_82
+  - first:
+      213: 4145404856931062434
+    second: cuadrado standar_83
+  - first:
+      213: -8318356973612925222
+    second: cuadrado standar_84
+  - first:
+      213: 7770233826026982391
+    second: cuadrado standar_85
+  - first:
+      213: 3606833629730594047
+    second: cuadrado standar_86
+  - first:
+      213: -514992909076277522
+    second: cuadrado standar_87
+  - first:
+      213: -1422933756892766661
+    second: cuadrado standar_88
+  - first:
+      213: -2168029065377476443
+    second: cuadrado standar_89
+  - first:
+      213: -7548867107248390669
+    second: cuadrado standar_90
+  - first:
+      213: 5151816311826579875
+    second: cuadrado standar_91
+  - first:
+      213: 1544372420236276677
+    second: cuadrado standar_92
+  - first:
+      213: -1015347468838906279
+    second: cuadrado standar_93
+  - first:
+      213: -2117367316174264430
+    second: cuadrado standar_94
+  - first:
+      213: 1282134988104669243
+    second: cuadrado standar_95
+  - first:
+      213: -915630867700279264
+    second: cuadrado standar_96
+  - first:
+      213: -8388450895512463759
+    second: cuadrado standar_97
+  - first:
+      213: -2899344918452307107
+    second: cuadrado standar_98
+  - first:
+      213: 6985205008058793077
+    second: cuadrado standar_99
+  - first:
+      213: 4005417090803250454
+    second: cuadrado standar_100
+  - first:
+      213: -5171383326286698499
+    second: cuadrado standar_101
+  - first:
+      213: -9063279490106382839
+    second: cuadrado standar_102
+  - first:
+      213: -5819001916821612094
+    second: cuadrado standar_103
+  - first:
+      213: -3243792508444680128
+    second: cuadrado standar_104
+  - first:
+      213: 7338155325237184127
+    second: cuadrado standar_105
+  - first:
+      213: -4938004357509405258
+    second: cuadrado standar_106
+  - first:
+      213: -4154283711871644987
+    second: cuadrado standar_107
+  - first:
+      213: 1768663993466996473
+    second: cuadrado standar_108
+  - first:
+      213: 1579607543506027445
+    second: cuadrado standar_109
+  - first:
+      213: 5181053041043193599
+    second: cuadrado standar_110
+  - first:
+      213: 7055380375210623059
+    second: cuadrado standar_111
+  - first:
+      213: -3625490865526166517
+    second: cuadrado standar_112
+  - first:
+      213: 7910642903943634604
+    second: cuadrado standar_113
+  - first:
+      213: -39040334364490425
+    second: cuadrado standar_114
+  - first:
+      213: 2990744730317599717
+    second: cuadrado standar_115
+  - first:
+      213: -5532353496006454741
+    second: cuadrado standar_116
+  - first:
+      213: -3368409011410224296
+    second: cuadrado standar_117
+  - first:
+      213: 1995437608238701977
+    second: cuadrado standar_118
+  - first:
+      213: -1680905546836248059
+    second: cuadrado standar_119
+  - first:
+      213: 2793541838148908949
+    second: cuadrado standar_120
+  - first:
+      213: -5162803692607992238
+    second: cuadrado standar_121
+  - first:
+      213: -248701971321713646
+    second: cuadrado standar_122
+  - first:
+      213: 3986407502355603857
+    second: cuadrado standar_123
+  - first:
+      213: 4299366226436738967
+    second: cuadrado standar_124
+  - first:
+      213: 5495276449980145732
+    second: cuadrado standar_125
+  - first:
+      213: -3577682076692675178
+    second: cuadrado standar_126
+  - first:
+      213: 2580445182326141577
+    second: cuadrado standar_127
+  - first:
+      213: 5640183796402952755
+    second: cuadrado standar_128
+  - first:
+      213: 7981683276538788300
+    second: cuadrado standar_129
+  - first:
+      213: -7102535094463058990
+    second: cuadrado standar_130
+  - first:
+      213: 5304995364479508901
+    second: cuadrado standar_131
+  - first:
+      213: 837348924149756844
+    second: cuadrado standar_132
+  - first:
+      213: 8541841462385507153
+    second: cuadrado standar_133
+  - first:
+      213: 7275625958568278198
+    second: cuadrado standar_134
+  - first:
+      213: -7587357928012881079
+    second: cuadrado standar_135
+  - first:
+      213: 7583264827794274634
+    second: cuadrado standar_136
+  - first:
+      213: 6520391500217954220
+    second: cuadrado standar_137
+  - first:
+      213: -8205290610117175873
+    second: cuadrado standar_138
+  - first:
+      213: 1086601027163371599
+    second: cuadrado standar_139
+  - first:
+      213: 2920578860559013472
+    second: cuadrado standar_140
+  - first:
+      213: -1964188533330781166
+    second: cuadrado standar_141
+  - first:
+      213: 6035912104830855938
+    second: cuadrado standar_142
+  - first:
+      213: -2279907020144889174
+    second: cuadrado standar_143
+  - first:
+      213: -5260297540215818460
+    second: cuadrado standar_144
+  - first:
+      213: -890018038553812964
+    second: cuadrado standar_145
+  - first:
+      213: -6726766719992654468
+    second: cuadrado standar_146
+  - first:
+      213: -2256388132855547547
+    second: cuadrado standar_147
+  - first:
+      213: -2211195922243459704
+    second: cuadrado standar_148
+  - first:
+      213: 7111022938303241530
+    second: cuadrado standar_149
+  - first:
+      213: -3461579644212254951
+    second: cuadrado standar_150
+  - first:
+      213: 5988373303143127283
+    second: cuadrado standar_151
+  - first:
+      213: -62313248924742770
+    second: cuadrado standar_152
+  - first:
+      213: -3496300985846696466
+    second: cuadrado standar_153
+  - first:
+      213: -5697970936826054616
+    second: cuadrado standar_154
+  - first:
+      213: 1085610060436567808
+    second: cuadrado standar_155
+  - first:
+      213: -1052879454533830308
+    second: cuadrado standar_156
+  - first:
+      213: -1676396367515912115
+    second: cuadrado standar_157
+  - first:
+      213: -4731022520537533105
+    second: cuadrado standar_158
+  - first:
+      213: 4351086542659046316
+    second: cuadrado standar_159
+  - first:
+      213: 3906179898273840270
+    second: cuadrado standar_160
+  - first:
+      213: -3863350434489585252
+    second: cuadrado standar_161
+  - first:
+      213: -6379756278224093798
+    second: cuadrado standar_162
+  - first:
+      213: 8506913866068033518
+    second: cuadrado standar_163
+  - first:
+      213: -5793132707025007145
+    second: cuadrado standar_164
+  - first:
+      213: -274455905863407678
+    second: cuadrado standar_165
+  - first:
+      213: -4571008096373007120
+    second: cuadrado standar_166
+  - first:
+      213: -6058449556973282031
+    second: cuadrado standar_167
+  - first:
+      213: -4017377177137909468
+    second: cuadrado standar_168
+  - first:
+      213: -6407786357050624164
+    second: cuadrado standar_169
+  - first:
+      213: 7587270573338732191
+    second: cuadrado standar_170
+  - first:
+      213: -7211307018565397464
+    second: cuadrado standar_171
+  - first:
+      213: -708446834230601007
+    second: cuadrado standar_172
+  - first:
+      213: 5352896562340184953
+    second: cuadrado standar_173
+  - first:
+      213: -4226697854059590003
+    second: cuadrado standar_174
+  - first:
+      213: -530377738712737142
+    second: cuadrado standar_175
+  - first:
+      213: -2696000260018049596
+    second: cuadrado standar_176
+  - first:
+      213: -2278204298260140445
+    second: cuadrado standar_177
+  - first:
+      213: -4535250302925299230
+    second: cuadrado standar_178
+  - first:
+      213: 1203338377247506677
+    second: cuadrado standar_179
+  - first:
+      213: -4045130759725059174
+    second: cuadrado standar_180
+  - first:
+      213: -5150243605279910823
+    second: cuadrado standar_181
+  - first:
+      213: -5376998008822768118
+    second: cuadrado standar_182
+  - first:
+      213: 5419064526417515302
+    second: cuadrado standar_183
+  - first:
+      213: -2484736958111757724
+    second: cuadrado standar_184
+  - first:
+      213: 2358839607502324009
+    second: cuadrado standar_185
+  - first:
+      213: -8844257944453231793
+    second: cuadrado standar_186
+  - first:
+      213: -1109340928400969300
+    second: cuadrado standar_187
+  - first:
+      213: 2931315065910888014
+    second: cuadrado standar_188
+  - first:
+      213: -5319995916251775263
+    second: cuadrado standar_189
+  - first:
+      213: 1948064045593486677
+    second: cuadrado standar_190
+  - first:
+      213: -138301208553316585
+    second: cuadrado standar_191
+  - first:
+      213: -2742052562042436098
+    second: cuadrado standar_192
+  - first:
+      213: 5113028112845855967
+    second: cuadrado standar_193
+  - first:
+      213: 943265697852697095
+    second: cuadrado standar_194
+  - first:
+      213: 8825475511922530407
+    second: cuadrado standar_195
+  - first:
+      213: 1256672130960910514
+    second: cuadrado standar_196
+  - first:
+      213: 2799361496120557680
+    second: cuadrado standar_197
+  - first:
+      213: 6746480968059599082
+    second: cuadrado standar_198
+  - first:
+      213: -72132276003992136
+    second: cuadrado standar_199
+  - first:
+      213: 7813768060082846909
+    second: cuadrado standar_200
+  - first:
+      213: 392818107881547555
+    second: cuadrado standar_201
+  - first:
+      213: 1947895733670746362
+    second: cuadrado standar_202
+  - first:
+      213: 305276034211957994
+    second: cuadrado standar_203
+  - first:
+      213: -7883011479189392243
+    second: cuadrado standar_204
+  - first:
+      213: 4619468122107531708
+    second: cuadrado standar_205
+  - first:
+      213: 48620571866054543
+    second: cuadrado standar_206
+  - first:
+      213: -6000267414906833164
+    second: cuadrado standar_207
+  - first:
+      213: 8974905785278958044
+    second: cuadrado standar_208
+  - first:
+      213: 2176599364803067643
+    second: cuadrado standar_209
+  - first:
+      213: -7470760786586858356
+    second: cuadrado standar_210
+  - first:
+      213: -3696844876209613104
+    second: cuadrado standar_211
+  - first:
+      213: 7552224296592310071
+    second: cuadrado standar_212
+  - first:
+      213: 1940477154308240284
+    second: cuadrado standar_213
+  - first:
+      213: 3785783446098242632
+    second: cuadrado standar_214
+  - first:
+      213: 2630751114971328108
+    second: cuadrado standar_215
+  - first:
+      213: -7337912323258959540
+    second: cuadrado standar_216
+  - first:
+      213: -4798633868665315385
+    second: cuadrado standar_217
+  - first:
+      213: 1184688323009154856
+    second: cuadrado standar_218
+  - first:
+      213: -1078448402995132714
+    second: cuadrado standar_219
+  - first:
+      213: 6757960157455725610
+    second: cuadrado standar_220
+  - first:
+      213: -3715149607712604952
+    second: cuadrado standar_221
+  - first:
+      213: 533916901592028418
+    second: cuadrado standar_222
+  - first:
+      213: -5471205431069971054
+    second: cuadrado standar_223
+  - first:
+      213: 7259312504707421014
+    second: cuadrado standar_224
+  - first:
+      213: -7058003441453392312
+    second: cuadrado standar_225
+  - first:
+      213: -3571934502969542266
+    second: cuadrado standar_226
+  - first:
+      213: -8375633321302817854
+    second: cuadrado standar_227
+  - first:
+      213: -2530009106421492630
+    second: cuadrado standar_228
+  - first:
+      213: 2035479886927587933
+    second: cuadrado standar_229
+  - first:
+      213: -3478308080820328662
+    second: cuadrado standar_230
+  - first:
+      213: 1557794327812471864
+    second: cuadrado standar_231
+  - first:
+      213: -7080370575866047078
+    second: cuadrado standar_232
+  - first:
+      213: 5402353638527360041
+    second: cuadrado standar_233
+  - first:
+      213: -5913599894062691492
+    second: cuadrado standar_234
+  - first:
+      213: 2501531963909986450
+    second: cuadrado standar_235
+  - first:
+      213: 2294697598833760609
+    second: cuadrado standar_236
+  - first:
+      213: 5550699770113321758
+    second: cuadrado standar_237
+  - first:
+      213: -936497249683309416
+    second: cuadrado standar_238
+  - first:
+      213: 5866636439341984537
+    second: cuadrado standar_239
+  - first:
+      213: 9030909374550718311
+    second: cuadrado standar_240
+  - first:
+      213: 3297871426753583414
+    second: cuadrado standar_241
+  - first:
+      213: 1517746435042754689
+    second: cuadrado standar_242
+  - first:
+      213: 6709269594038387818
+    second: cuadrado standar_243
+  - first:
+      213: 5349172440694554073
+    second: cuadrado standar_244
+  - first:
+      213: 7447675825203096829
+    second: cuadrado standar_245
+  - first:
+      213: 6189065734093316653
+    second: cuadrado standar_246
+  - first:
+      213: 7110616696187436463
+    second: cuadrado standar_247
+  - first:
+      213: -5045814538956349734
+    second: cuadrado standar_248
+  - first:
+      213: 7825667806444332487
+    second: cuadrado standar_249
+  - first:
+      213: 6866015291004280633
+    second: cuadrado standar_250
+  - first:
+      213: 544135731813628076
+    second: cuadrado standar_251
+  - first:
+      213: -8114847538307809714
+    second: cuadrado standar_252
+  - first:
+      213: 8990895073759601227
+    second: cuadrado standar_253
+  - first:
+      213: -3850941624502749297
+    second: cuadrado standar_254
+  - first:
+      213: 5987148202789371065
+    second: cuadrado standar_255
+  - first:
+      213: 5652899086459852916
+    second: cuadrado standar_256
+  - first:
+      213: -3858227030979785778
+    second: cuadrado standar_257
+  - first:
+      213: -6012217618372815940
+    second: cuadrado standar_258
+  - first:
+      213: -3130443593316304795
+    second: cuadrado standar_259
+  - first:
+      213: 3988718657461246360
+    second: cuadrado standar_260
+  - first:
+      213: -1296446485824449384
+    second: cuadrado standar_261
+  - first:
+      213: -5265571512834906427
+    second: cuadrado standar_262
+  - first:
+      213: -2009597035934026951
+    second: cuadrado standar_263
+  - first:
+      213: 3587536531024087613
+    second: cuadrado standar_264
+  - first:
+      213: 4940955369945750888
+    second: cuadrado standar_265
+  - first:
+      213: -8678683495895533009
+    second: cuadrado standar_266
+  - first:
+      213: 3154958665732404622
+    second: cuadrado standar_267
+  - first:
+      213: 4352115550725339219
+    second: cuadrado standar_268
+  - first:
+      213: 2151058689238252813
+    second: cuadrado standar_269
+  - first:
+      213: 7073392081686189551
+    second: cuadrado standar_270
+  - first:
+      213: -4469367505705096809
+    second: cuadrado standar_271
+  - first:
+      213: -1365733584144432683
+    second: cuadrado standar_272
+  - first:
+      213: 4039816233037486864
+    second: cuadrado standar_273
+  - first:
+      213: 8880931077766955912
+    second: cuadrado standar_274
+  - first:
+      213: 9222079112361883156
+    second: cuadrado standar_275
+  - first:
+      213: 1373055640833045488
+    second: cuadrado standar_276
+  - first:
+      213: 4502074532692314002
+    second: cuadrado standar_277
+  - first:
+      213: 4206238310638660907
+    second: cuadrado standar_278
+  - first:
+      213: -1976212812744289234
+    second: cuadrado standar_279
+  - first:
+      213: 4945206904814082032
+    second: cuadrado standar_280
+  - first:
+      213: 4600684470534708686
+    second: cuadrado standar_281
+  - first:
+      213: -1355724171982762608
+    second: cuadrado standar_282
+  - first:
+      213: -1219166602878405579
+    second: cuadrado standar_283
+  - first:
+      213: 4576758263002993223
+    second: cuadrado standar_284
+  - first:
+      213: -1188452160486645834
+    second: cuadrado standar_285
+  - first:
+      213: -7959835906862340947
+    second: cuadrado standar_286
+  - first:
+      213: 7535222997924544578
+    second: cuadrado standar_287
+  - first:
+      213: 1093066805906574735
+    second: cuadrado standar_288
+  - first:
+      213: 4175817449459365296
+    second: cuadrado standar_289
+  - first:
+      213: -6811135009793202579
+    second: cuadrado standar_290
+  - first:
+      213: -3065086003312886202
+    second: cuadrado standar_291
+  - first:
+      213: -7747171721748444263
+    second: cuadrado standar_292
+  - first:
+      213: 424207130767540208
+    second: cuadrado standar_293
+  - first:
+      213: -6161205081916544136
+    second: cuadrado standar_294
+  - first:
+      213: 1371951398236710085
+    second: cuadrado standar_295
+  - first:
+      213: -9067739724581133551
+    second: cuadrado standar_296
+  - first:
+      213: -865873167407154461
+    second: cuadrado standar_297
+  - first:
+      213: -4187294419104990726
+    second: cuadrado standar_298
+  - first:
+      213: 3689992822339527074
+    second: cuadrado standar_299
+  - first:
+      213: 749888353353555396
+    second: cuadrado standar_300
+  - first:
+      213: -974764483496663100
+    second: cuadrado standar_301
+  - first:
+      213: 89924624333301105
+    second: cuadrado standar_302
+  - first:
+      213: -6291037599402792403
+    second: cuadrado standar_303
+  - first:
+      213: 824134636650860136
+    second: cuadrado standar_304
+  - first:
+      213: -6807946090782968428
+    second: cuadrado standar_305
+  - first:
+      213: 8801402293708682894
+    second: cuadrado standar_306
+  - first:
+      213: -6984485463313300804
+    second: cuadrado standar_307
+  - first:
+      213: 3313819914831557424
+    second: cuadrado standar_308
+  - first:
+      213: -196874451670019225
+    second: cuadrado standar_309
+  - first:
+      213: -4430900849908052075
+    second: cuadrado standar_310
+  - first:
+      213: 3122409269102393063
+    second: cuadrado standar_311
+  - first:
+      213: -8690472345836528595
+    second: cuadrado standar_312
+  - first:
+      213: -5523841082349564653
+    second: cuadrado standar_313
+  - first:
+      213: 5913931707015441564
+    second: cuadrado standar_314
+  - first:
+      213: 3214280149616790261
+    second: cuadrado standar_315
+  - first:
+      213: 2996982845321378477
+    second: cuadrado standar_316
+  - first:
+      213: -517136551081235637
+    second: cuadrado standar_317
+  - first:
+      213: -6413163590263322567
+    second: cuadrado standar_318
+  - first:
+      213: -9009148439394096506
+    second: cuadrado standar_319
+  - first:
+      213: 1508061211536312996
+    second: cuadrado standar_320
+  - first:
+      213: -6217662336137767918
+    second: cuadrado standar_321
+  - first:
+      213: 1327820544963507504
+    second: cuadrado standar_322
+  - first:
+      213: -4373896533139356743
+    second: cuadrado standar_323
+  - first:
+      213: -7892787923492764745
+    second: cuadrado standar_324
+  - first:
+      213: 6249849867699547582
+    second: cuadrado standar_325
+  - first:
+      213: 3145322345843696710
+    second: cuadrado standar_326
+  - first:
+      213: 6367233726797313732
+    second: cuadrado standar_327
+  - first:
+      213: 1064274923483318344
+    second: cuadrado standar_328
+  - first:
+      213: -1695874557814110642
+    second: cuadrado standar_329
+  - first:
+      213: 7078071946284095910
+    second: cuadrado standar_330
+  - first:
+      213: 5956689449594785641
+    second: cuadrado standar_331
+  - first:
+      213: 365610628296203429
+    second: cuadrado standar_332
+  - first:
+      213: -475206069288453350
+    second: cuadrado standar_333
+  - first:
+      213: 5018829051154079683
+    second: cuadrado standar_334
+  - first:
+      213: -8039372977987949749
+    second: cuadrado standar_335
+  - first:
+      213: 6778402927022861840
+    second: cuadrado standar_336
+  - first:
+      213: 5811565929405663018
+    second: cuadrado standar_337
+  - first:
+      213: 726373403986469355
+    second: cuadrado standar_338
+  - first:
+      213: -1510294891724996974
+    second: cuadrado standar_339
+  - first:
+      213: -8402997768111305794
+    second: cuadrado standar_340
+  - first:
+      213: -9022040704897736081
+    second: cuadrado standar_341
+  - first:
+      213: -998238714060713695
+    second: cuadrado standar_342
+  - first:
+      213: 2327516120581509047
+    second: cuadrado standar_343
+  - first:
+      213: 4191214652646044750
+    second: cuadrado standar_344
+  - first:
+      213: -4527553852553989932
+    second: cuadrado standar_345
+  - first:
+      213: 986969581753370411
+    second: cuadrado standar_346
+  - first:
+      213: -5138696873126742115
+    second: cuadrado standar_347
+  - first:
+      213: 4311140744350781831
+    second: cuadrado standar_348
+  - first:
+      213: -4248697132445934879
+    second: cuadrado standar_349
+  - first:
+      213: 5759733347912433894
+    second: cuadrado standar_350
+  - first:
+      213: 7731063929640157365
+    second: cuadrado standar_351
+  - first:
+      213: -3461787076082521386
+    second: cuadrado standar_352
+  - first:
+      213: 8848122608613697469
+    second: cuadrado standar_353
+  - first:
+      213: 4135143893819253935
+    second: cuadrado standar_354
+  - first:
+      213: -804607906609999367
+    second: cuadrado standar_355
+  - first:
+      213: -84370967119936047
+    second: cuadrado standar_356
+  - first:
+      213: -1089330456271617405
+    second: cuadrado standar_357
+  - first:
+      213: 3980355557296195952
+    second: cuadrado standar_358
+  - first:
+      213: 7899746909948712607
+    second: cuadrado standar_359
+  - first:
+      213: 3164125794487844812
+    second: cuadrado standar_360
+  - first:
+      213: -2598993790302825696
+    second: cuadrado standar_361
+  - first:
+      213: -4069868987106177552
+    second: cuadrado standar_362
+  - first:
+      213: -7815397036569113220
+    second: cuadrado standar_363
+  - first:
+      213: 8481127330848365388
+    second: cuadrado standar_364
+  - first:
+      213: -3633729236714859006
+    second: cuadrado standar_365
+  - first:
+      213: -5477905260539454042
+    second: cuadrado standar_366
+  - first:
+      213: 5801327674295731798
+    second: cuadrado standar_367
+  - first:
+      213: 4470185751377843652
+    second: cuadrado standar_368
+  - first:
+      213: 7430530078825134691
+    second: cuadrado standar_369
+  - first:
+      213: 4921733448475520971
+    second: cuadrado standar_370
+  - first:
+      213: -6096721566204562758
+    second: cuadrado standar_371
+  - first:
+      213: -7085751614845243940
+    second: cuadrado standar_372
+  - first:
+      213: -8212681910706666422
+    second: cuadrado standar_373
+  - first:
+      213: -5381903026699429564
+    second: cuadrado standar_374
+  - first:
+      213: 8655919147523491861
+    second: cuadrado standar_375
+  - first:
+      213: -2517218746738496708
+    second: cuadrado standar_376
+  - first:
+      213: -466479580673428030
+    second: cuadrado standar_377
+  - first:
+      213: 8755566338291134895
+    second: cuadrado standar_378
+  - first:
+      213: -3496718501265877742
+    second: cuadrado standar_379
+  - first:
+      213: -5918787821565184761
+    second: cuadrado standar_380
+  - first:
+      213: 6639464677799371842
+    second: cuadrado standar_381
+  - first:
+      213: 27689361790619323
+    second: cuadrado standar_382
+  - first:
+      213: 6548905400528418316
+    second: cuadrado standar_383
+  - first:
+      213: -5804121000895461814
+    second: cuadrado standar_384
+  - first:
+      213: -7799550514492607157
+    second: cuadrado standar_385
+  - first:
+      213: -1733481830231531737
+    second: cuadrado standar_386
+  - first:
+      213: -1968615748219708575
+    second: cuadrado standar_387
+  - first:
+      213: -7632409914576729713
+    second: cuadrado standar_388
+  - first:
+      213: -148039340855543644
+    second: cuadrado standar_389
+  - first:
+      213: -390809412551933887
+    second: cuadrado standar_390
+  - first:
+      213: -685079619585381465
+    second: cuadrado standar_391
+  - first:
+      213: -6214741328485091515
+    second: cuadrado standar_392
+  - first:
+      213: -3858793732056910765
+    second: cuadrado standar_393
+  - first:
+      213: 3829337104821401174
+    second: cuadrado standar_394
+  - first:
+      213: 1092970897884238016
+    second: cuadrado standar_395
+  - first:
+      213: -2014315901882453540
+    second: cuadrado standar_396
+  - first:
+      213: 7643992766789341708
+    second: cuadrado standar_397
+  - first:
+      213: -4458458685825096150
+    second: cuadrado standar_398
+  - first:
+      213: -4931240404853683050
+    second: cuadrado standar_399
+  - first:
+      213: 8731805645224117023
+    second: cuadrado standar_400
+  - first:
+      213: 1274392415376540083
+    second: cuadrado standar_401
+  - first:
+      213: 3205958221439116409
+    second: cuadrado standar_402
+  - first:
+      213: -6561894136165273008
+    second: cuadrado standar_403
+  - first:
+      213: 5163380527443323005
+    second: cuadrado standar_404
+  - first:
+      213: 1044605771584620720
+    second: cuadrado standar_405
+  - first:
+      213: -8047012733023482642
+    second: cuadrado standar_406
+  - first:
+      213: 4608430337647571849
+    second: cuadrado standar_407
+  - first:
+      213: -4375105148843665579
+    second: cuadrado standar_408
+  - first:
+      213: 7070604936628432790
+    second: cuadrado standar_409
+  - first:
+      213: 3491561230722774858
+    second: cuadrado standar_410
+  - first:
+      213: -3867544833382251564
+    second: cuadrado standar_411
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cuadrado standar_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063b594e4cff1d930800000000000000
+      internalID: 4166392351408108384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f220ed6281e4c49e0800000000000000
+      internalID: -1635846699004067281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61a7927b3bf334b0800000000000000
+      internalID: -5461745690326097557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dea01b5e5d361f80800000000000000
+      internalID: -8136248201334182185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad84bc3c6e2002e30800000000000000
+      internalID: 4476581219756886234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2aceb9a7fd61ce0800000000000000
+      internalID: -1434713713575943442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7ad767e94704e00800000000000000
+      internalID: 1026948938982074346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bd0add50fc9a560800000000000000
+      internalID: 7325613892994915223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuadrado standar_15
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff359ae774947d760800000000000000
+      internalID: 7482529877315900415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
