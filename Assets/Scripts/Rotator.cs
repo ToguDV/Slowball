@@ -11,49 +11,21 @@ public class Rotator : MonoBehaviour
     public bool ForwardX = false;
     public bool ForwardY = false;
     public bool ForwardZ = false;
-
-    //Reverse Direction
-    public bool ReverseX = false;
-    public bool ReverseY = false;
-    public bool ReverseZ = false;
     public bool aleatorizar = false;
-
+    private Vector3 rotationAxis;
     private void Start()
     {
         if (aleatorizar)
         {
             speed = Random.Range(speed - (speed * 0.6f), speed + (speed * 0.5f));
         }
+        rotationAxis = new Vector3(ForwardX ? 1 : 0, ForwardY ? 1 : 0, ForwardZ ? 1 : 0);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Forward Direction
-        if (ForwardX == true)
-        {
-            transform.Rotate(Time.deltaTime * speed, 0, 0, Space.Self);
-        }
-        if (ForwardY == true)
-        {
-            transform.Rotate(0, Time.deltaTime * speed, 0, Space.Self);
-        }
-        if (ForwardZ == true)
-        {
-            transform.Rotate(0, 0, Time.deltaTime * speed, Space.Self);
-        }
-        //Reverse Direction
-        if (ReverseX == true)
-        {
-            transform.Rotate(-Time.deltaTime * speed, 0, 0, Space.Self);
-        }
-        if (ReverseY == true)
-        {
-            transform.Rotate(0, -Time.deltaTime * speed, 0, Space.Self);
-        }
-        if (ReverseZ == true)
-        {
-            transform.Rotate(0, 0, -Time.deltaTime * speed, Space.Self);
-        }
+        transform.Rotate(rotationAxis * speed * Time.fixedDeltaTime, Space.Self);
 
     }
 }

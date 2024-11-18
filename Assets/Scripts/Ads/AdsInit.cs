@@ -7,9 +7,10 @@ public class AdsInit : MonoBehaviour
 {
     void Start()
     {
-        if (!Advertisement.isInitialized)
+        /*if (!Advertisement.isInitialized)
         {
             Advertisement.Initialize(AdsManager.gameIdAndroid, AdsManager.testMode);
         }
+        */
     }
 }

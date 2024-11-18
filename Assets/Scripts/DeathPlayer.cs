@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Advertisements;
 
-public class DeathPlayer : MonoBehaviour, IUnityAdsListener
+public class DeathPlayer : MonoBehaviour
 {
     public ArenaLoader arenaLoader;
     public GameObject templateDeath;
@@ -43,7 +42,6 @@ public class DeathPlayer : MonoBehaviour, IUnityAdsListener
         once = true;
         currentRevives = 0;
         isDead = false;
-        Advertisement.AddListener(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,7 +61,8 @@ public class DeathPlayer : MonoBehaviour, IUnityAdsListener
             Time.timeScale = 1f;
             templateDeath.SetActive(true);
             btnQuit.SetActive(true);
-            if (currentRevives >= maxRevives)
+            //if (currentRevives >= maxRevives)
+            if(true)
             {
                 btnQuit.SetActive(false);
                 btnRevive.SetActive(false);
@@ -90,7 +89,6 @@ public class DeathPlayer : MonoBehaviour, IUnityAdsListener
                     {
                         Debug.Log("deaths = " + PlayerPrefs.GetInt("currentDeaths", 0) + "/" + AdsManager.deathsToShowReward);
                         PlayerPrefs.SetInt("currentDeaths", 0);
-                        Advertisement.Show(AdsManager.idAndroidInters);
                     }
 
                 }
@@ -125,26 +123,6 @@ public class DeathPlayer : MonoBehaviour, IUnityAdsListener
         throwController.enabled = true;
         throwController.setFirstClick(true);
         currentRevives = 0;
-
-    }
-
-    public void OnUnityAdsReady(string placementId)
-    {
-
-    }
-
-    public void OnUnityAdsDidError(string message)
-    {
-
-    }
-
-    public void OnUnityAdsDidStart(string placementId)
-    {
-
-    }
-
-    public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
-    {
 
     }
 }

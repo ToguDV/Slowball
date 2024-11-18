@@ -58,7 +58,7 @@ public class slowMotion : MonoBehaviour
 
             if (rigidbody2D)
             {
-                rigidbody2D.velocity *= ThrowController.speedStatic;
+                rigidbody2D.linearVelocity *= ThrowController.speedStatic;
             }
             palanca = true;
         }
@@ -74,7 +74,7 @@ public class slowMotion : MonoBehaviour
 
             if (rigidbody2D)
             {
-                rigidbody2D.velocity *= ThrowController.speedStatic;
+                rigidbody2D.linearVelocity *= ThrowController.speedStatic;
             }
             palanca = false;
         }

@@ -28,6 +28,7 @@ public class ThrowController : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         firstClick = true;
         onceDrag = false;
         lineRendererController = GameObject.Find("Linerenderer").GetComponent<LineRendererController>();
@@ -41,14 +42,15 @@ public class ThrowController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lastVelocity = rigidbody2D.velocity;
+        lastVelocity = rigidbody2D.linearVelocity;
     }
 
     void FixedUpdate()
     {
+        
         if (!DeathPlayer.isDead)
         {
-            rigidbody2D.velocity = Vector2.ClampMagnitude(rigidbody2D.velocity, maxSpeed);
+            rigidbody2D.linearVelocity = Vector2.ClampMagnitude(rigidbody2D.linearVelocity, maxSpeed);
         }
 
 
@@ -57,7 +59,7 @@ public class ThrowController : MonoBehaviour
     private void OnDisable()
     {
         EsconderLineas();
-        rigidbody2D.velocity = Vector2.zero;
+        rigidbody2D.linearVelocity = Vector2.zero;
     }
 
 
@@ -124,7 +126,7 @@ public class ThrowController : MonoBehaviour
         var speed = lastVelocity.magnitude;
         var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-        rigidbody2D.velocity = direction * Mathf.Max(speed, 0f);
+        rigidbody2D.linearVelocity = direction * Mathf.Max(speed, 0f);
     }
 
     public void ActualizarLineas()
@@ -147,7 +149,7 @@ public class ThrowController : MonoBehaviour
         {
             puntoA.transform.position = puntoB.transform.position;
             puntoC.transform.position = puntoB.transform.position;
-            rigidbody2D.velocity = (lineRendererController.lineRenderer.GetPosition(1) - lineRendererController.lineRenderer.GetPosition(2)) * speed;
+            rigidbody2D.linearVelocity = (lineRendererController.lineRenderer.GetPosition(1) - lineRendererController.lineRenderer.GetPosition(2)) * speed;
             for (int i = 0; i < lineRendererController.points.Length; i++)
             {
                 lineRendererController.lineRenderer.SetPosition(i, lineRendererController.points[i].position);

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+using Unity.Cinemachine;
 
 public class ZoomOnPoint : MonoBehaviour
 {
@@ -10,11 +10,12 @@ public class ZoomOnPoint : MonoBehaviour
     public float maxZoom;
     public float ratioZoom;
     public float valueRatioZoom;
-    public CinemachineVirtualCamera cinemachineVirtualCamera;
+    public CinemachineCamera cinemachineVirtualCamera;
     bool temp1;
     bool temp2;
     void Awake()
     {
+        cinemachineVirtualCamera = GameObject.Find("Main Camera").GetComponent<CinemachineCamera>();
         MakeZoom();
         temp1 = false;
         temp2 = false;
@@ -53,14 +54,14 @@ public class ZoomOnPoint : MonoBehaviour
     IEnumerator ZoomOut()
     {
 
-        while (cinemachineVirtualCamera.m_Lens.OrthographicSize < minZoom)
+        while (cinemachineVirtualCamera.Lens.OrthographicSize < minZoom)
         {
             yield return new WaitForSecondsRealtime(ratioZoom);
-            cinemachineVirtualCamera.m_Lens.OrthographicSize += valueRatioZoom;
+            cinemachineVirtualCamera.Lens.OrthographicSize += valueRatioZoom;
 
         }
 
-        if (cinemachineVirtualCamera.m_Lens.OrthographicSize >= minZoom)
+        if (cinemachineVirtualCamera.Lens.OrthographicSize >= minZoom)
         {
             temp1 = false;
         }
@@ -72,14 +73,14 @@ public class ZoomOnPoint : MonoBehaviour
     IEnumerator ZoomIn()
     {
         
-        while (cinemachineVirtualCamera.m_Lens.OrthographicSize > maxZoom)
+        while (cinemachineVirtualCamera.Lens.OrthographicSize > maxZoom)
         {
             yield return new WaitForSecondsRealtime(ratioZoom);
-            cinemachineVirtualCamera.m_Lens.OrthographicSize -= valueRatioZoom;
+            cinemachineVirtualCamera.Lens.OrthographicSize -= valueRatioZoom;
             
         }
 
-        if(cinemachineVirtualCamera.m_Lens.OrthographicSize <= maxZoom)
+        if(cinemachineVirtualCamera.Lens.OrthographicSize <= maxZoom)
         {
             temp2 = false;
         }
