@@ -109,10 +109,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1199420013789166503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -487.4, y: 905.4}
-  m_SizeDelta: {x: 83.20001, y: 76.79999}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 52.600006, y: -54.599976}
+  m_SizeDelta: {x: 83.20001, y: 76.80005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1097948414
 CanvasRenderer:
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9339d0485fc3c441a324f8110146098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseContainer: {fileID: 0}
+  pauseContainer: {fileID: 60079507258008107}
 --- !u!114 &1097948416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -281,7 +281,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -338,6 +338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476209996797482156, guid: f612a2efd7c15394f8e19ead43f9a13c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1476209996797482157, guid: f612a2efd7c15394f8e19ead43f9a13c,
         type: 3}
@@ -472,6 +477,12 @@ PrefabInstance:
 --- !u!224 &60079507258008106 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1476209996797482157, guid: f612a2efd7c15394f8e19ead43f9a13c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488999147349112455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &60079507258008107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1476209996797482156, guid: f612a2efd7c15394f8e19ead43f9a13c,
     type: 3}
   m_PrefabInstance: {fileID: 1488999147349112455}
   m_PrefabAsset: {fileID: 0}
