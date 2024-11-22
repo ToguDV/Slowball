@@ -41,9 +41,11 @@ public class ArenaModeSpawner : MonoBehaviour
 
     IEnumerator spawnear()
     {
+        
+        int length = timeProgress.Length;
         while (true)
         {
-            if (maxIndex != timeProgress.Length + 1)
+            if (maxIndex != length + 1)
             {
                 if (ArenaScoreboard.time > timeProgress[maxIndex - 1])
                 {
@@ -71,6 +73,6 @@ public class ArenaModeSpawner : MonoBehaviour
 
     public void Activar()
     {
-        StartCoroutine(spawnear());
+       // StartCoroutine(spawnear());
     }
 }

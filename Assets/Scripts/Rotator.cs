@@ -22,10 +22,10 @@ public class Rotator : MonoBehaviour
         rotationAxis = new Vector3(ForwardX ? 1 : 0, ForwardY ? 1 : 0, ForwardZ ? 1 : 0);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         //Forward Direction
-        transform.Rotate(rotationAxis * speed * Time.fixedDeltaTime, Space.Self);
+        transform.Rotate(speed * Time.deltaTime * rotationAxis, Space.Self);
 
     }
 }

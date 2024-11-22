@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888762869415818363}
-  - component: {fileID: 7888762869415818361}
   - component: {fileID: 7888762869415818360}
   - component: {fileID: 7888762869415818343}
   - component: {fileID: 7888762869415818362}
@@ -36,18 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7888762871335503184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &7888762869415818361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7888762869415818364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55821502b306783448fdcd42ce44507b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &7888762869415818360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,7 +113,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -400,6 +387,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7888762870645568623}
     m_Modifications:
+    - target: {fileID: 6192953405842059138, guid: 0353e93bca0ae7e45b5118f791d2c728,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6192953405842059139, guid: 0353e93bca0ae7e45b5118f791d2c728,
         type: 3}
       propertyPath: other

@@ -7,6 +7,10 @@ public class PointWithRotation : MonoBehaviour
     public float offset;
     private GameObject target;
     public float rotationSpeed;
+
+    private Vector2 direction;
+    Quaternion rotation;
+
     void Start()
     {
         Invoke("SetTarget", 2f);
@@ -25,10 +29,10 @@ public class PointWithRotation : MonoBehaviour
 
     private void RotateTowards(Vector2 target)
     {
-        Vector2 direction = target - (Vector2)transform.position;
+        direction = target - (Vector2)transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle + offset, Vector3.forward);
+        rotation = Quaternion.AngleAxis(angle + offset, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 }
