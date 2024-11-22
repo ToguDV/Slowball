@@ -340,7 +340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aIDestinationSetter: {fileID: 7888762870645568621}
-  nameTarget: bola neon
+  target: {fileID: 0}
+  nameTarget: player
 --- !u!1 &7888762871335503185
 GameObject:
   m_ObjectHideFlags: 0

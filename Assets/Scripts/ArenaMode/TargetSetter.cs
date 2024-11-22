@@ -6,12 +6,17 @@ using Pathfinding;
 public class TargetSetter : MonoBehaviour
 {
     public AIDestinationSetter aIDestinationSetter;
-    GameObject target;
+    public GameObject target;
     public string nameTarget;
-    // Start is called before the first frame update
-    void Awake()
+
+    void Start()
     {
-        target = GameObject.Find("bola neon");
+        Invoke("SetTarget", 1f);
+    }
+
+    private void SetTarget()
+    {
+        target = GameObjectManager.Instance.GameObjectDictionary[nameTarget];
         aIDestinationSetter.target = target.transform;
     }
 }

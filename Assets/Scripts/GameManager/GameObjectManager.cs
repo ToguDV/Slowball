@@ -7,4 +7,16 @@ public class GameObjectManager : MonoBehaviour
 
     public Dictionary<string, GameObject> GameObjectDictionary { get; private set; } = new Dictionary<string, GameObject>();
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

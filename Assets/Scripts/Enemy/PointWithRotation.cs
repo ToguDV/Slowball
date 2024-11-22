@@ -9,10 +9,14 @@ public class PointWithRotation : MonoBehaviour
     public float rotationSpeed;
     void Start()
     {
-        target = GameObject.Find("bola neon");
+        Invoke("SetTarget", 2f);
     }
 
-    // Update is called once per frame
+    private void SetTarget()
+    {
+        TargetSetter targetSetter = gameObject.GetComponentInParent<TargetSetter>();
+        target = targetSetter.target;
+    }
     void Update()
     {
         if(target!= null)

@@ -29,6 +29,7 @@ public class ThrowController : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = 60;
+
         firstClick = true;
         onceDrag = false;
         lineRendererController = GameObject.Find("Linerenderer").GetComponent<LineRendererController>();
