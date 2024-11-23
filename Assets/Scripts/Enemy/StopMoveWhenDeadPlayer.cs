@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class StopMoveWhenDeadPlayer : MonoBehaviour
 {
-    public AIPath aipath;
     private void OnEnable()
     {
         DeathPlayer.onDeath += StopMove;
@@ -20,11 +18,11 @@ public class StopMoveWhenDeadPlayer : MonoBehaviour
 
     public void StopMove()
     {
-        aipath.canMove = false;
+        //aipath.canMove = false;
     }
 
     public void ContinueMove()
     {
-        aipath.canMove = true;
+        //aipath.canMove = true;
     }
 }

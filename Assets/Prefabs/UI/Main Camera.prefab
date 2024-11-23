@@ -212,11 +212,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2492598203585378060}
   - component: {fileID: 4131481380142337863}
-  - component: {fileID: 7225481180501482780}
+  - component: {fileID: 3649418836866746841}
   - component: {fileID: 3755441395685248830}
+  - component: {fileID: 2492598203585378290}
   - component: {fileID: 2492598203585378291}
   - component: {fileID: 2492598203585378289}
-  - component: {fileID: 2492598203585378290}
   - component: {fileID: 697736184710871364}
   m_Layer: 0
   m_Name: Main Camera
@@ -288,7 +288,7 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &7225481180501482780
+--- !u!114 &3649418836866746841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,16 +297,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 2492598203585378288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b5d7c088409d9a40b7b09aa707777f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetOffset: {x: 0, y: 0, z: 0}
   TrackerSettings:
-    BindingMode: 3
+    BindingMode: 4
     PositionDamping: {x: 1, y: 1, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
+  OrbitStyle: 0
+  Radius: 10
+  Orbits:
+    Top:
+      Radius: 2
+      Height: 5
+    Center:
+      Radius: 4
+      Height: 2.25
+    Bottom:
+      Radius: 2.5
+      Height: 0.1
+    SplineCurvature: 0.5
+  RecenteringTarget: 2
+  HorizontalAxis:
+    Value: 0
+    Center: 0
+    Range: {x: -180, y: 180}
+    Wrap: 1
+    Recentering:
+      Enabled: 0
+      Wait: 1
+      Time: 2
+    Restrictions: 0
+  VerticalAxis:
+    Value: 17.5
+    Center: 17.5
+    Range: {x: -10, y: 45}
+    Wrap: 0
+    Recentering:
+      Enabled: 0
+      Wait: 1
+      Time: 2
+    Restrictions: 0
+  RadialAxis:
+    Value: 1
+    Center: 1
+    Range: {x: 1, y: 1}
+    Wrap: 0
+    Recentering:
+      Enabled: 0
+      Wait: 1
+      Time: 2
+    Restrictions: 0
 --- !u!114 &3755441395685248830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +368,23 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5dcccc30fd3e0a84eb751da8ae004ac6, type: 3}
   - {fileID: 21300000, guid: 638c2de2f650b84438062909a69463aa, type: 3}
   background: {fileID: 1010428538}
+--- !u!114 &2492598203585378290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2492598203585378288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d316564c37d835641aeff8c8115ffd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lineRC: {fileID: 0}
 --- !u!20 &2492598203585378291
 Camera:
   m_ObjectHideFlags: 0
@@ -383,23 +444,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2492598203585378288}
   m_Enabled: 1
---- !u!114 &2492598203585378290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2492598203585378288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d316564c37d835641aeff8c8115ffd1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lineRC: {fileID: 0}
 --- !u!114 &697736184710871364
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class Vibrator : MonoBehaviour
 
         else
         {
-            Handheld.Vibrate();
+            //Handheld.Vibrate();
         }
     }
 

@@ -10,6 +10,9 @@ public class ArenaScoreboard : MonoBehaviour
     public static float time;
     bool enable;
 
+    private float updateInterval = 1f; // Actualizar cada 1 segundo
+    private float nextUpdateTime = 0f;
+
     private void Awake()
     {
         time = 0f;
@@ -52,7 +55,12 @@ public class ArenaScoreboard : MonoBehaviour
         if (enable)
         {
             time += Time.deltaTime;
-            UpdateScore(time);
+
+            if (Time.time >= nextUpdateTime)
+            {
+                UpdateScore(time);
+                nextUpdateTime = Time.time + updateInterval;
+            }
         }
     }
 

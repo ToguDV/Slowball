@@ -25,6 +25,8 @@ public class ThrowController : MonoBehaviour
     private bool firstClick;
     private bool onceDrag;
 
+    private bool switchSlow;
+
 
     private void Awake()
     {
@@ -44,6 +46,20 @@ public class ThrowController : MonoBehaviour
     void Update()
     {
         lastVelocity = rigidbody2D.linearVelocity;
+        if (Input.GetMouseButton(0) || Input.touchCount > 0)
+        {
+            switchSlow = true;
+            MouseDrag();
+        }
+
+        else
+        {
+            if (switchSlow)
+            {
+                MouseUp();
+                switchSlow = false;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -64,7 +80,7 @@ public class ThrowController : MonoBehaviour
     }
 
 
-    private void OnMouseDrag()
+    private void MouseDrag()
     {
         if (!btnPause.isPaused)
         {
@@ -102,7 +118,7 @@ public class ThrowController : MonoBehaviour
 
     }
 
-    private void OnMouseUp()
+    private void MouseUp()
     {
         if (!btnPause.isPaused)
         {

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class Shooter : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class Shooter : MonoBehaviour
     public static bool canShoot;
     public static bool temp;
     public bool hasAiPath = true;
-    private AIPath aIPath;
     private bool alreadyShoot;
 
     private void Awake()
@@ -22,7 +20,7 @@ public class Shooter : MonoBehaviour
         ratio = Random.Range(ratio, ratio * 1.5f + 1);
         if (hasAiPath)
         {
-            aIPath = GetComponentInParent<AIPath>();
+            //aIPath = GetComponentInParent<AIPath>();
         }
 
         if (!temp)
@@ -91,7 +89,7 @@ public class Shooter : MonoBehaviour
     {
         if (hasAiPath)
         {
-            aIPath.canMove = value;
+            //aIPath.canMove = value;
         }
     }
 }
