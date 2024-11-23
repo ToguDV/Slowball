@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &298747024
 Grid:
   m_ObjectHideFlags: 0
@@ -8094,6 +8094,16 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 533661058344182247, guid: 5d8de52f3062308479e0e0c12106f19c,
+        type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533661058344182247, guid: 5d8de52f3062308479e0e0c12106f19c,
+        type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 533661058344182244, guid: 5d8de52f3062308479e0e0c12106f19c, type: 3}
     m_RemovedGameObjects: []
@@ -8114,7 +8124,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 271526685, guid: 4536849a36874d64ab11ccc147af4dd0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 271526686, guid: 4536849a36874d64ab11ccc147af4dd0, type: 3}
       propertyPath: m_LocalScale.x
@@ -8146,7 +8156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010428536, guid: 4536849a36874d64ab11ccc147af4dd0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1010428537, guid: 4536849a36874d64ab11ccc147af4dd0, type: 3}
       propertyPath: m_LocalScale.x
@@ -8245,7 +8255,7 @@ PrefabInstance:
     - target: {fileID: 3346956853247528667, guid: 4536849a36874d64ab11ccc147af4dd0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4131481380142337863, guid: 4536849a36874d64ab11ccc147af4dd0,
         type: 3}
@@ -8270,12 +8280,12 @@ PrefabInstance:
     - target: {fileID: 8809461617128391889, guid: 4536849a36874d64ab11ccc147af4dd0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8908610646917530470, guid: 4536849a36874d64ab11ccc147af4dd0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7225481180501482780, guid: 4536849a36874d64ab11ccc147af4dd0, type: 3}
